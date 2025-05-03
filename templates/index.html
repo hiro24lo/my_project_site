@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クローバー薬局|ホーム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    {% include 'header.html'%}
+    <nav> 
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="ロゴ" width="200">
+    <a href="/">ホーム</a>
+    <a href="/about">私たちについて</a>
+    </nav>
+    <div class="container">
+        <h1>ようこそ、クローバー薬局へ！</h1>
+        <p>地域に寄り添う薬局です。</p>
+    </div>  
+    {% include 'footer.html' %}  
+ </body>
+ </html>       

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  {% include 'header.html' %}
+
+  <div class="container">
+    <h1>お問い合わせ</h1>
+
+    <form method="post" action="/contact">
+      <label>お名前：</label><br>
+      <input type="text" name="name"><br>
+
+      <label>メールアドレス：</label><br>
+      <input type="email" name="email"><br>
+
+      <label>メッセージ：</label><br>
+      <textarea name="message"></textarea><br>
+
+      <input type="submit" value="送信">
+    </form>
+
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+  </div>
+
+  {% include 'footer.html' %}
+
+</body>
+</html>
